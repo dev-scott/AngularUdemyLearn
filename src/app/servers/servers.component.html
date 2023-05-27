@@ -1,5 +1,9 @@
-<button [disabled] = "!allowNewServer" class="bg-black text-white p-6">Add server</button>
-{{allowNewServer}}
+<!-- <input type="text" (input)="onUpdateServer($event)" > -->
 
+<input type="text" [(ngModel)]="serverName" >
+
+<!-- <p>{{serverName}}</p>  -->
+<p>{{serverCreationStatus}}</p>
+<button (click)="onCreateServer()" [disabled] = "!allowNewServer" class="bg-black text-white p-6">Add server</button>
 <app-server></app-server>
 <app-server></app-server>
